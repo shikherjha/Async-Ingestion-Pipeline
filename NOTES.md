@@ -12,7 +12,7 @@ Celery with Redis as broker was the simplest option that still gives real queue 
 
 ### Database: SQLite, not Postgres
 
-For a take-home, SQLite eliminates the need for another container. The schema is the same, the ORM is the same, and it would take ten seconds to swap the connection string to Postgres. The trade-off is SQLite's write locking under heavy concurrency, which doesn't matter for a demo but would in production.
+SQLite eliminates the need for another container. The schema is the same, the ORM is the same, and it would take ten seconds to swap the connection string to Postgres. The trade-off is SQLite's write locking under heavy concurrency, which doesn't matter for a demo but would in production.
 
 ### Auth: API keys, not JWT/OAuth
 
