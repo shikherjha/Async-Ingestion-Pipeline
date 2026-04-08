@@ -155,6 +155,14 @@ uvicorn backend.main:app --reload --port 8000
 celery -A backend.celery_app worker --loglevel=info --pool=solo
 ```
 
+### Testing the LLM Independently
+
+If you only want to verify the LLM extraction logic and fallback router without spinning up Redis, Celery, or the FastAPI web server, you can run the standalone test script:
+
+```bash
+python test_llm.py
+```
+
 ## API Endpoints
 
 ### POST /api/ingest
